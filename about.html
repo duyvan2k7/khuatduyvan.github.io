@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới thiệu - Khuất Duy Văn</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+      color: #333;
+      animation: fadeInBody 1s ease-in-out;
+    }
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background 0.5s ease;
+    }
+    header:hover {
+      background: linear-gradient(to right, #0056b3, #0099cc);
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffeb3b;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      animation: slideUp 1s ease-in-out;
+    }
+    .profile {
+      text-align: center;
+      animation: fadeInProfile 1.5s ease-in;
+    }
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInBody {
+      from { background-color: #ffffff; }
+      to { background: linear-gradient(135deg, #e0f7fa, #e3f2fd); }
+    }
+
+    @keyframes fadeInProfile {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Giới thiệu</h1>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="about.html">Giới thiệu</a>
+      <a href="contact.html">Liên hệ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <img src="van-avatar.jpg" alt="Ảnh đại diện Khuất Duy Văn" />
+      <h2>Khuất Duy Văn</h2>
+      <p>Xin chào! Mình là học sinh lớp 12A1. Mình rất đam mê công nghệ, thích khám phá lập trình và hiện tại đang phát triển trang web cá nhân của riêng mình.</p>
+      <p>Hy vọng bạn sẽ thích những gì mình chia sẻ tại đây. Cảm ơn đã ghé thăm!</p>
+    </div>
+  </div>
+</body>
+</html>
