@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khuất Duy Văn - Website Cá Nhân</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      color: white;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      animation: fadeIn 1.5s ease-in-out;
+      text-align: center;
+    }
+
+    #home {
+      background-image: url('Cucquang1.jpg');
+    }
+
+    #about {
+      background-image: url('Cucquang2.jpg');
+    }
+
+    #contact {
+      background-image: url('Cucquang3.jpg');
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      padding: 4px 8px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: #00ffff;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #00ffff;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-top: 1rem;
+      box-shadow: 0 0 20px rgba(0,255,255,0.7);
+      transition: transform 0.3s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+
+    h1, h2, p {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideIn 1.2s forwards;
+    }
+
+    h1 {
+      animation-delay: 0.5s;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      animation-delay: 0.7s;
+      font-size: 2rem;
+    }
+
+    p {
+      animation-delay: 0.9s;
+      max-width: 600px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow-text {
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    }
+
+    .parallax {
+      background-attachment: fixed;
+    }
+
+    .section-content {
+      backdrop-filter: blur(2px);
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .section-content:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+
+    #contact .section-content {
+      animation: pulse 2.5s infinite;
+      border: 2px solid #00ffff;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(0,255,255,0.5); }
+      50% { box-shadow: 0 0 30px rgba(0,255,255,0.8); }
+      100% { box-shadow: 0 0 10px rgba(0,255,255,0.5); }
+    }
+
+    a.social-link {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      animation: slideIn 1.4s forwards;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#about">Giới thiệu</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+
+  <section id="home" class="parallax">
+    <div class="section-content">
+      <h1 class="glow-text">Chào mừng đến với website của tôi</h1>
+      <img src="van-avatar.jpg" alt="Avatar" class="avatar">
+    </div>
+  </section>
+
+  <section id="about" class="parallax">
+    <div class="section-content">
+      <h2 class="glow-text">Giới thiệu</h2>
+      <p>Tôi là <strong>Khuất Duy Văn</strong>, học sinh lớp 12A1. Tôi đam mê lập trình, đang xây dựng website cá nhân để học hỏi và chia sẻ kiến thức. Ngoài ra, tôi là một học sinh đẹp zai, đã có bồ rồi nhé!</p>
+    </div>
+  </section>
+
+  <section id="contact" class="parallax">
+    <div class="section-content">
+      <h2 class="glow-text">Liên hệ</h2>
+      <p>Email: <a href="mailto:van29012007@gmail.com" style="color:#00ffff; text-decoration:none;">van29012007@gmail.com</a></p>
+      <a class="social-link" href="https://www.facebook.com/khuatduyvann" target="_blank">Facebook: facebook.com/khuatduyvann</a>
+    </div>
+  </section>
+</body>
+</html>
